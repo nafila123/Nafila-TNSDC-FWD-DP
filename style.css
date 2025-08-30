@@ -1,0 +1,363 @@
+/* Reset & Font */
+
+* {
+
+  margin: 0;
+
+  padding: 0;
+
+  box-sizing: border-box;
+
+  font-family: 'Poppins', sans-serif;
+
+}
+
+body {
+
+  background: linear-gradient(135deg, #ff80ff, #b84dff, #ff4da6);
+
+  color: #333;
+
+  scroll-behavior: smooth;
+
+}
+
+/* HEADER */
+
+header {
+
+  background: linear-gradient(135deg, #b84dff, #ff4da6, #ff80ff);
+
+  color: white;
+
+  padding: 25px;
+
+  text-align: center;
+
+  font-size: 32px;
+
+  font-weight: bold;
+
+  letter-spacing: 1px;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+
+  animation: fadeDown 1s ease-in-out;
+
+}
+
+/* NAVIGATION */
+
+nav {
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 20px;
+
+  background: linear-gradient(135deg, #ff4da6, #b84dff);
+
+  padding: 12px 0;
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 1000;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+}
+
+nav a {
+
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 16px;
+
+  padding: 8px 15px;
+
+  position: relative;
+
+  transition: 0.3s;
+
+}
+
+nav a::after {
+
+  content: '';
+
+  position: absolute;
+
+  width: 0;
+
+  height: 3px;
+
+  background: #ff80ff;
+
+  left: 0;
+
+  bottom: 0;
+
+  transition: 0.3s;
+
+}
+
+nav a:hover::after {
+
+  width: 100%;
+
+}
+
+nav a:hover {
+
+  transform: scale(1.1);
+
+}
+
+/* HERO */
+
+.hero {
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 80px 20px;
+
+  text-align: center;
+
+  animation: fadeIn 1.2s ease-in-out;
+
+}
+
+.hero h1 {
+
+  font-size: 40px;
+
+  color: #b84dff;
+
+  text-shadow: 0 0 15px rgba(184,77,255,0.8);
+
+  margin-bottom: 15px;
+
+  animation: glow 2s infinite alternate;
+
+}
+
+.hero p {
+
+  max-width: 600px;
+
+  font-size: 18px;
+
+  color: #555;
+
+  animation: fadeUp 1.2s ease-in-out;
+
+}
+
+/* SECTIONS */
+
+section {
+
+  padding: 70px 20px;
+
+  max-width: 1100px;
+
+  margin: auto;
+
+  opacity: 0;
+
+  transform: translateY(40px);
+
+  transition: all 1s ease;
+
+}
+
+section.reveal {
+
+  opacity: 1;
+
+  transform: translateY(0);
+
+}
+
+h2 {
+
+  text-align: center;
+
+  color: #b84dff;
+
+  font-size: 32px;
+
+  margin-bottom: 40px;
+
+  position: relative;
+
+}
+
+h2::after {
+
+  content: "";
+
+  width: 80px;
+
+  height: 4px;
+
+  background: #ff4da6;
+
+  display: block;
+
+  margin: 10px auto;
+
+  border-radius: 2px;
+
+}
+
+/* CARDS */
+
+.grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+
+  gap: 25px;
+
+}
+
+.card {
+
+  background: white;
+
+  padding: 25px;
+
+  border-radius: 15px;
+
+  text-align: center;
+
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+
+  transition: all 0.4s ease;
+
+}
+
+.card:hover {
+
+  transform: translateY(-10px) scale(1.05);
+
+  background: #ffc0f0;
+
+  box-shadow: 0 6px 25px rgba(184,77,255,0.5);
+
+}
+
+.card h3 {
+
+  color: #b84dff;
+
+  margin-bottom: 10px;
+
+}
+
+/* FORM */
+
+form {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 15px;
+
+  max-width: 500px;
+
+  margin: auto;
+
+}
+
+input, textarea, button {
+
+  padding: 14px;
+
+  border-radius: 8px;
+
+  border: 1px solid #ccc;
+
+  font-size: 16px;
+
+  transition: all 0.3s ease;
+
+}
+
+input:focus, textarea:focus {
+
+  border: 1px solid #b84dff;
+
+  outline: none;
+
+  box-shadow: 0 0 10px rgba(184,77,255,0.5);
+
+}
+
+button {
+
+  background: linear-gradient(135deg, #b84dff, #ff4da6, #ff80ff);
+
+  color: white;
+
+  border: none;
+
+  cursor: pointer;
+
+  font-weight: bold;
+
+  transition: 0.3s;
+
+}
+
+button:hover {
+
+  background: linear-gradient(135deg, #a133ff, #ff4da6, #ff80ff);
+
+  transform: scale(1.08);
+
+  box-shadow: 0 4px 15px rgba(184,77,255,0.5);
+
+}
+
+/* FOOTER */
+
+footer {
+
+  text-align: center;
+
+  padding: 20px;
+
+  background: #b84dff;
+
+  color: white;
+
+  margin-top: 40px;
+
+  font-size: 14px;
+
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeIn { from {opacity: 0; transform: translateY(-30px);} to {opacity: 1; transform: translateY(0);} }
+
+@keyframes fadeUp { from {opacity: 0; transform: translateY(30px);} to {opacity: 1; transform: translateY(0);} }
+
+@keyframes fadeDown { from {opacity: 0; transform: translateY(-30px);} to {opacity: 1; transform: translateY(0);} }
+
+@keyframes glow { from {text-shadow: 0 0 15px #ff4da6;} to {text-shadow: 0 0 30px #b84dff;} }
